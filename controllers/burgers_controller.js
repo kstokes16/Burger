@@ -2,8 +2,15 @@ var express = require('express');
 var router = express.Router();
 var burger = require ('../models/burger.js');
 
+console.log("Reading this line");
+
 router.get('/', function (req, res) {
-    res.render('index');
-})
+    burger.selectAll(function(burger_data){
+        console.log(burger_data);
+        console.log("Made it here");
+        res.render('index');
+    })
+    
+});
 
 module.exports = router;

@@ -1,10 +1,10 @@
 var express = require('express');
 var app = express();
 var PORT = process.env.PORT || 8080;
-var routes = require('./controllers/burgers_controller.js');
-app.use('/', routes);
+var router = require('./controllers/burgers_controller.js');
+app.use('/', router);
 
-// Serve statis content from the public directory in the application directory
+// Serve static content from the public directory in the application directory
 app.use(express.static(__dirname + "/public"));
 
 // Lets Express handle data parsing
