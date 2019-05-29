@@ -10,11 +10,11 @@
                 <form>
                     <div class="form-group text-center">
                     <label for="exampleFormControlInput1"><h6>Enter the name of a burger you would like to devour!</h6></label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your burger here...">
+                    <input type="email" class="form-control" id="burger-form" placeholder="Enter your burger here...">
                     </div>
                 </form>
                     
-                    <button type="button" class="btn btn-warning text-center">Add my burger please!</button>
+                    <button type="button" class="btn btn-warning text-center" id="add-burger">Add my burger please!</button>
 
         </div>
     </div>
@@ -25,6 +25,20 @@
     <div class="row">
         <div class="col-md-6 text-center">
             <h5>Burgers waiting to be devoured are shown below:</h5>
+            <br>
+                  <ul>
+        {{#each burger_data}}
+       
+        <li>
+          <p>
+           
+            {{this.id}}. {{this.burger_name}}
+
+          </p>
+        </li>
+       
+        {{/each}}
+      </ul>
         </div>
 
         <div class="col-md-6 text-center">
@@ -32,3 +46,4 @@
         </div>
 
     </div>
+
