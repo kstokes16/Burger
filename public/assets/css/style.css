@@ -1,0 +1,22 @@
+body {
+    font-family: 'Ranga', cursive;
+}
+
+#header {
+    color: white;
+    background-color: #a1d501;
+    width: 100%
+}
+
+#left-column, #right-column {
+    background-color: #faab3e;
+    color: white;
+}
+
+#juicy-burger {
+    align-items: center;
+}
+
+#add-burger {
+    color: #e81802;
+}

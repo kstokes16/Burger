@@ -1,15 +1,16 @@
 <div class="container">
 <br>
-    <div class="row">
+    <div class="row" id="header">
         <div class="col text-center">
-            <h1>Eat Da Burger!</h1>
-            <hr>
+            <h1>EAT DA BURGER!</h1>
         </div>
     </div>
 
+    <br>
+
     <div class="row">
         <div class="col-12 text-center">
-            <label for="exampleFormControlInput1"><h4>Enter the name of a burger you would like to devour!</h4></label>
+            <label for="exampleFormControlInput1"><h4>WHAT ARE YOU CRAVING?</h4></label>
         </div>
     </div>
 
@@ -21,7 +22,7 @@
                     </div>
                 </form>
                     
-                    <button type="button" class="btn btn-warning text-center" id="add-burger">Add my burger please!</button>
+                    <button type="button" class="btn btn-warning text-center" id="add-burger">CRAVE NO MORE!</button>
 
         </div>
     </div>
@@ -30,8 +31,9 @@
     <br>
 
     <div class="row">
-        <div class="col-md-6">
-            <h5>Burgers waiting to be devoured are shown below:</h5>
+        <div class="col-md-4 text-center" id="left-column">
+            <br>
+            <h5 class="text-center">DEVOUR THESE:</h5>
             <br>
 
         {{#each burger_data}}
@@ -47,8 +49,13 @@
 
         </div>
 
-        <div class="col-md-6 text-center">
-            <h5>Burgers that have been devoured are shown here:</h5>
+        <div class="col-md-4 d-none d-sm-block" id="juicy-burger">
+            <img src="./assets/burger-v2" class="img-fluid hidden-sm-down" alt="Delicious burger">
+        </div>
+
+        <div class="col-md-4 text-center" id="right-column">
+            <br>
+            <h5 class="text-center">DEVOURED:</h5>
             <br>
 
         {{#each burger_data}}
