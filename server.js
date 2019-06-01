@@ -19,15 +19,6 @@ var exphbs = require('express-handlebars');
 app.engine("handlebars", exphbs({defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Serve index.handlebars to the root route.
-// app.get('/', function (req, res) {
-//     res.send('Hello World')
-//   })
- 
-// app.get('/', function (req, res) {
-//     res.render('home');
-// });
-
 // Start server so it listens for client requests
 app.listen(PORT, function() {
     console.log("Server listening on http://localhost:" + PORT);
