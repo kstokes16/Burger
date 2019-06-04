@@ -5,12 +5,16 @@ body {
 #header {
     color: white;
     background-color: #a1d501;
-    width: 100%
 }
 
-#left-column, #right-column {
+#left-column {
     background-color: #faab3e;
     color: white;
+}
+
+#right-column {
+    background-color: #faab3e;
+    color: white;  
 }
 
 #juicy-burger {
