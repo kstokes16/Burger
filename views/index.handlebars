@@ -18,7 +18,7 @@
         <div class="col-md-4 mx-auto text-center">
                 <form>
                     <div class="form-group">
-                    <input type="email" class="form-control" id="burger-form">
+                    <input type="text" class="form-control" id="burger-form">
                     <br>
                     <button type="button" class="btn btn-warning text-center" id="add-burger">CRAVE NO MORE!</button>
                     </div>
@@ -41,7 +41,7 @@
        
           <p>    
             {{this.id}}. {{this.burger_name}}
-            <button type="button" class="btn btn-danger" id="devour-it-button">Devour it!</button>
+            <button type="button" class="btn btn-danger devoured" data-id={{this.id}}>Devour it!</button>
           </p>
        
         {{/unless}}

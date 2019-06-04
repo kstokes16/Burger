@@ -16,11 +16,13 @@ router.get('/', function (req, res) {
 
 // route to add burgers to the table
 router.post('/api/burgers', function (req, res) {
+    console.log("Req: "+JSON.stringify(req.body));
+    var temp =  JSON.stringify(req.body);
     burger.create([
         "burger_name", "devoured"
     ],
     [
-        req.body.burger_name, req.body.devoured
+        temp.name, temp.devoured
     ], function (result) {
         res.json({ id: result.insertId });
     });

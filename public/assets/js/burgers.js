@@ -6,20 +6,23 @@ $("#add-burger").on("click", function (event) {
    // console.log(burgerAdded);
 
     var newBurger = {
-        burger_name: burgerAdded,
-        devoured: "0"
+        name: $("#burger-form").val().trim(),
+        devoured: 0
     };
+
+   console.log("Hello: "+JSON.stringify(newBurger));
 
     $.ajax("/api/burgers", {
         type: "POST",
-        data: newBurger
+        data: {name: $("#burger-form").val().trim(),
+        devoured: 0}
     }).then(function() {
         console.log("I added a new burger");
         location.reload();
     });
 });
 
-$("#devour-it-button").on("click", function (event) {
+$(".devoured").on("click", function (event) {
     event.preventDefault();
     console.log("You clicked the devour button");
 
